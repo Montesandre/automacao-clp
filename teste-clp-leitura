@@ -3,7 +3,7 @@ import time
 
 # Configuração do cliente Modbus
 PLC_IP = "192.168.1.100"  # IP do CLP
-PLC_PORT = 502  # Porta padrão Modbus
+PLC_PORT = 502  # Aqui porta padrão Modbus
 modbus_client = ModbusClient(host=PLC_IP, port=PLC_PORT, auto_open=True)
 
 def ler_registrador(endereco):
@@ -25,12 +25,12 @@ def escrever_registrador(endereco, valor):
 
 if __name__ == "__main__":
     while True:
-        # Exemplo de leitura de um registrador
+        # Exemplo da leitura de um registrador
         temp_atual = ler_registrador(0)
         if temp_atual is not None:
             print(f"Temperatura Atual: {temp_atual}°C")
 
-            # Se a temperatura ultrapassar um limite, aciona um atuador
+            # Se a temperatura ultrapassar um limite, aciona um atuador(notificar)
             if temp_atual > 30:
                 escrever_registrador(1, 1)  # Liga o atuador
             else:
