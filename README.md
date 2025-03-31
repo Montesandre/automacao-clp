@@ -9,3 +9,10 @@ Resumindo a criação desse código:
 - Leitura de registradores: Ler a temperatura de um sensor conectado ao CLP.
 - Tomada de decisão: Se a temperatura ultrapassar 30°C, aciona um atuador.
 - Escrita de registradores: Atualizar o registrador para ligar ou desligar um dispositivo.
+
+## Instalação das Dependências
+Antes de rodar o script, instale as bibliotecas necessárias com:
+```bash
+pip install -r requirements.txt
+
+(Dessa forma, qualquer pessoa que clonar o repositório pode instalar as dependências facilmente e evitar erros. )
